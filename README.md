@@ -6,10 +6,14 @@ PySpark is the Python API for Apache Spark.
 This project consists of exercises from two courses:
  
 Spark and Python for Big Data with PySpark 
+
 Instructor: Jose Portilla 
  
+ 
 UCSanDiegoX: DSE230x 
+
 Big Data Analytics Using Spark 
+
 Instructor: Yoav Freund 
 
 ### Prerequisites
