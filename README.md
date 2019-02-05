@@ -13,6 +13,7 @@ This project consists of exercises from two courses:
 ### Prerequisites
 
 Tech used:
+- Cmder
 - Docker
 - Python
 - Apache Spark
