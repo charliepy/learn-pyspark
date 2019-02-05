@@ -12,7 +12,10 @@ This project consists of exercises from two courses:
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Tech used:
+- Docker
+- Python
+- Apache Spark
 
 ```
 Give examples
