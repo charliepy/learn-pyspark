@@ -1,6 +1,7 @@
 import findspark
 findspark.init('/home/charlie/spark-2.1.0-bin-hadoop2.7')
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import dayofmonth,month, year, hour, dayofyear, weekofyear, format_number, date_format
 
 spark = SparkSession.builder.appName('ops').getOrCreate()
 
@@ -26,3 +27,12 @@ df.filter(close_less_than_500 & open_greater_than_200).select(['Open', 'Close'])
 result = df.filter(close_less_than_500).collect()
 row = result[0].asDict()
 row['Volume']
+
+# Day of month and month
+df.select([dayofmonth(df['Date']), month(df['Date'])]).show()
+
+# Get the average close price for each year
+# Format average column to 2 decimal places
+new_df = df.withColumn('Year', year(df['Date']))
+result = new_df.groupBy('Year').mean().select(['Year', format_number('avg(Close)', 2)])
+result.withColumnRenamed('format_number(avg(Close), 2)', 'Avg Close').show()
