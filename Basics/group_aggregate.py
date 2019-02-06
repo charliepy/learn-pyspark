@@ -1,5 +1,3 @@
-import findspark
-findspark.init('/home/charlie/spark-2.1.0-bin-hadoop2.7')
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import countDistinct, avg, stddev, format_number
 
