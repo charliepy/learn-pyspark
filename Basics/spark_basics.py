@@ -4,4 +4,9 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.appName('Basics').getOrCreate()
 df = spark.read.json('Input/people.json')
+
+# Shows DataFrame
 df.show()
+
+# Shows Columns and DataTypes
+df.printSchema()
