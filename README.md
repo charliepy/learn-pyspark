@@ -14,9 +14,10 @@ This project consists of exercises from two courses:
 
 Tech used:
 - Cmder
-- Docker
-- Python
-- Apache Spark
+- Oracle VM VirtualBox 6.0.4 
+- Ubuntu 16.04.5 LTS 32-bit
+- Python 3.5
+- Apache Spark 2.1
 
 ```
 Give examples
